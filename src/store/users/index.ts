@@ -11,7 +11,7 @@ const reducer: Reducer<UsersState> = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case UsersTypes.LOAD_REQUEST:
       return {...state, loading: true};
-    case UsersTypes.LOAD_SUCCCES:
+    case UsersTypes.LOAD_SUCCESS:
       return {
         ...state,
         loading: false,
