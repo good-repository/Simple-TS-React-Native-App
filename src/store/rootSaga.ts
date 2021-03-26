@@ -1,8 +1,9 @@
 import {all, takeLatest} from 'redux-saga/effects';
 
-import {UsersTypes} from './users/types';
+import {UsersTypes, User} from './users/types';
 import {load} from './users/sagas';
 
 export default function* rootSaga() {
-  return yield all([takeLatest(UsersTypes.LOAD_REQUEST, load)]);
+  const users: User[] = yield all([takeLatest(UsersTypes.LOAD_REQUEST, load)]);
+  return users;
 }
