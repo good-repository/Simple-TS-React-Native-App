@@ -1,20 +1,14 @@
 import React from 'react';
-import {
-  // ActivityIndicator,
-  // FlatList,
-  SafeAreaView,
-  // StyleSheet,
-  Text,
-  View,
-} from 'react-native';
+import {Provider} from 'react-redux';
+import store from './src/store';
+
+import UsersList from './src/UsersList';
 
 const App = () => {
   return (
-    <SafeAreaView>
-      <View>
-        <Text>Hi!</Text>
-      </View>
-    </SafeAreaView>
+    <Provider store={store}>
+      <UsersList />
+    </Provider>
   );
 };
 
