@@ -3,11 +3,18 @@ import api from '../../services/api';
 
 import {loadSuccess, loadFailure} from './actions';
 
-export function* load() {
-  try {
-    const response = yield call(api.get);
+interface Props {
+  type: string;
+  payload: number;
+}
 
-    yield put(loadSuccess(response.data));
+export function* load(props: Props) {
+  let page = props.payload;
+
+  try {
+    const response = yield call(api.get, `?page=${page}&results=20`);
+
+    yield put(loadSuccess(response.data.results));
   } catch (err) {
     yield put(loadFailure());
   }
