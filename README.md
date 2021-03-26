@@ -1,7 +1,6 @@
 
 <h1 align="center">
 	# TS React Native
- Simple app with a endless Flatlist and single call to API endpoint
 </h1>
 
 <br>
