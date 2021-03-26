@@ -25,6 +25,6 @@ for iOS: `yarn react-native run-ios`
 
 for android: `yarn react-native run-android`
 
-if you already have it stalled 
+if you already have it installed 
 
 `yarn start`
