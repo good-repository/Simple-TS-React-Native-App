@@ -1,9 +1,10 @@
 import {action} from 'typesafe-actions';
 import {UsersTypes, User} from './types';
 
-export const loadRequest = () => action(UsersTypes.LOAD_REQUEST);
+export const loadRequest = (page: number) =>
+  action(UsersTypes.LOAD_REQUEST, page);
 
 export const loadSuccess = (data: User[]) =>
-  action(UsersTypes.LOAD_SUCCCES, {data});
+  action(UsersTypes.LOAD_SUCCESS, {data});
 
 export const loadFailure = () => action(UsersTypes.LOAD_FAILURE);
