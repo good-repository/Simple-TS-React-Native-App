@@ -11,7 +11,7 @@
 
 ## Project 💻  
 
- Simple app with a endless Flatlist and single call to API endpoint.
+ Simple app with a endless Flatlist and call to an endpoint.
 
 ## Instructions 📚  
 
